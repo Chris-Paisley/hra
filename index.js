@@ -37,5 +37,5 @@ else {
     // try to send the static file
     staticFile(req.url,res);
   }
-}).listen(process.env.PORT || 5000);
+}).listen(process.env.PORT || 6000);
 console.log('Server running');
