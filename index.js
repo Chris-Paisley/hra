@@ -35,7 +35,7 @@ return res.end(req.method + ' is not implemented by this server.');
 }
 else {
     // try to send the static file
-    staticFile(req.url,res); 
+    staticFile(req.url,res);
   }
-}).listen(1337, '127.0.0.1');
-console.log('Server running at http://127.0.0.1:1337/');
+}).listen(process.env.PORT || 5000);
+console.log('Server running');
