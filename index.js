@@ -37,5 +37,6 @@ else {
     // try to send the static file
     staticFile(req.url,res);
   }
-}).listen(process.env.PORT || 6000);
-console.log('Server running');
+}).listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
