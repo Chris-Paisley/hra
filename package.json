@@ -9,8 +9,13 @@
   "author": "Chris P",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.6.0",
     "colors": "^1.1.2",
     "express": "4.16.2",
-    "foobar": "^1.1.0"
+    "foobar": "^1.1.0",
+    "mongod": "^2.0.0",
+    "mongodb": "^3.0.0-rc0",
+    "mongoose": "^4.13.6",
+    "mongoose-post-find": "0.0.2"
   }
 }
