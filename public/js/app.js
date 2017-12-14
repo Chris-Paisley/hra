@@ -38,9 +38,11 @@ app.factory('EmployeeService', ['$resource', function ($resource) {
         }
     });
 }]);
+
 app.factory('TeamService', ['$resource', function ($resource) {
     return $resource('/teams/:teamId');
 }]);
+
 app.directive('imageFallback', function () {
     return {
         link: function (scope, elem, attrs) {
@@ -76,6 +78,7 @@ app.directive('imageFallback', function () {
         template += '</div>';
         newElement = $compile(template)(scope);
         element.replaceWith(newElement);
+
         scope.$on('$destroy', function () {
             newElement = undefined;
             element = undefined;
@@ -91,6 +94,7 @@ app.directive('imageFallback', function () {
     exports.link = link;
     return exports;
 });
+
 app.controller('EmployeesCtrl', ['$scope', 'EmployeeService', function ($scope, service) {
     service.query(function (data, headers) {
         $scope.employees = data;
