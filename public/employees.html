@@ -36,31 +36,31 @@
         <label class="control-label">Address</label>
         <ul class="address-lines">
           <li ng-repeat="line in employee.address.lines track by $index">
-            <span ng-hide="editing">{{line}}</span>
-            <div ng-show="editing" class="input-group address-edit">
-              <input type="text" class="form-control" ng-model="employee.address.lines[$index]" />
-              <span class="input-group-btn">
-                <button ng-click="address.addLine($index)" class="btn btn-success">
-                  <i class="fa fa-plus"></i>
-                </button>
-                <button ng-click="address.removeLine($index)" ng-disabled="employee.address.lines.length === 1" class="btn btn-danger">
-                   <i class="fa fa-trash-o"></i>
-                 </button>
-               </span>
-             </div>
-           </li>
-           <li>
-             <edit-in-line value="employee.address.city" editing="editing" />
-           </li>
-           <li>
-             <span ng-hide="editing">{{employee.address.state}}, {{employee.address.zip}}</span>
-           </li>
-           <li ng-show="editing">
-             <edit-in-line ng-show="editing" edit-type="select" value="employee.address.state" editing="editing" edit-list="states" ➥ edit-option='s for s in states' />
-           </li>
-           <li ng-show="editing">
-             <edit-in-line value="employee.address.zip" editing="editing" edit-type="number" />
-           </li>
+          <span ng-hide="editing">{{line}}</span>
+          <div ng-show="editing" class="input-group address-edit">
+            <input type="text" class="form-control" ng-model="employee.address.lines[$index]" />
+            <span class="input-group-btn">
+            <button ng-click="address.addLine($index)" class="btn btn-success">
+              <i class="fa fa-plus"></i>
+            </button>
+            <button ng-click="address.removeLine($index)" ng-disabled="employee.address.lines.length === 1" class="btn btn-danger">
+              <i class="fa fa-trash-o"></i>
+            </button>
+            </span>
+          </div>
+          </li>
+          <li>
+            <edit-in-line value="employee.address.city" editing="editing" />
+          </li>
+          <li>
+            <span ng-hide="editing">{{employee.address.state}}, {{employee.address.zip}}</span>
+          </li>
+          <li ng-show="editing">
+            <edit-in-line ng-show="editing" edit-type="select" value="employee.address.state" editing="editing" edit-list="states" ➥ edit-option='s for s in states' />
+          </li>
+          <li ng-show="editing">
+            <edit-in-line value="employee.address.zip" editing="editing" edit-type="number" />
+          </li>
          </ul>
        </div>
      </div>
