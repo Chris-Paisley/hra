@@ -119,7 +119,7 @@ function ($scope, $routeParams, employee, team, $q, config, $route) {
     ]).then(function (values) {
         $scope.teams = values[1];
         $scope.employee = values[0];
-        $scope.employee.team = getTeam($scope.teams, $scope.employee.team._id);
+        $scope.employee.team = getTeam($scope.teams, $scope.employee.team.id);
     }).catch(_handleError);
     $scope.editing = false;
     // To prevent multiple references to the same array, give us a new copy of it.
